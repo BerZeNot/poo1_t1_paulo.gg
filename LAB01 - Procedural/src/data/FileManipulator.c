@@ -2,7 +2,6 @@
 
 FILE *openFile(char *fileName){
     FILE *fp = fopen(fileName, "ab");
-    // printf("File path: ", f);
     if(fp == NULL){
         fp = fopen(fileName, "wb");
         if(fp == NULL){

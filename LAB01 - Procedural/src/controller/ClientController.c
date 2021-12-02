@@ -5,7 +5,6 @@
 
 void registrateClient(){
     Client newClient;
-    int cep;
 
     ShowClientRegister();
     setbuf(stdin,NULL);

@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "../util/UI.c"
 #include "../controller/ClientController.c"
+#include "../controller/EmployeeController.c"
+#include "../controller/ProductController.c"
 
 int menu();
 
@@ -20,6 +22,13 @@ int menu(){
         {
         case 1:
             registrateClient();
+            break;
+        case 2:
+            registrateEmployee();
+            break;
+
+        case 3:
+            registrateProduct();
             break;
         case 5:
             exit(0);
