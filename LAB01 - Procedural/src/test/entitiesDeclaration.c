@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
-#include "../entities/Client.c"
-#include "../entities/Employee.c"
-#include "../entities/Product.c"
+#include "../entity/Client.c"
+#include "../entity/Employee.c"
+#include "../entity/Product.c"
 
 int main(){
     Client c1;

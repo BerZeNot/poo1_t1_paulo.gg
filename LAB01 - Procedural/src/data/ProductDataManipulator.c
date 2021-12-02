@@ -1,0 +1,1 @@
+// responsável pela leitura e escrita dos dados nos respectivos arquivos
