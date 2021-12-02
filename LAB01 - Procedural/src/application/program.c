@@ -21,7 +21,10 @@ int menu(){
         case 1:
             registrateClient();
             break;
-        
+        case 5:
+            exit(0);
+            break;
+
         default:
             printf("| INVALID OPTION!\n");
             break;
