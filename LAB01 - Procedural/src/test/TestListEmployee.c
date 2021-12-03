@@ -21,7 +21,7 @@ int main(){
     employee_list_push_back(list, e1);
     employee_list_push_back(list, e2);
     employee_list_print(list);
-    printf("%d", employee_list_size(list));
+    printf("%d\n", employee_list_size(list));
 
     return 0;
 }

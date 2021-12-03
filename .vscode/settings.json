@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "stdio.h": "c",
-        "listclient.h": "c"
+        "listclient.h": "c",
+        "listemployee.h": "c"
     }
 }
