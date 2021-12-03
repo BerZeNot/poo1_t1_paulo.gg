@@ -3,8 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// responsável pela leitura e escrita dos dados nos respectivos arquivos
-
 char clientFileDataPath[] = {"../data/database/Clients.data"};
 
 

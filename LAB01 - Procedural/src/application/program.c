@@ -3,6 +3,7 @@
 #include "../controller/ClientController.c"
 #include "../controller/EmployeeController.c"
 #include "../controller/ProductController.c"
+#include "../controller/SaleController.c"
 
 int menu();
 
@@ -26,14 +27,18 @@ int menu(){
         case 2:
             registrateEmployee();
             break;
-
         case 3:
             registrateProduct();
             break;
-        case 5:
+        case 4:
+            registrateSale();
+            break;
+        // case 5:
+        //     reports();
+        //     break;
+        case 0:
             exit(0);
             break;
-
         default:
             printf("| INVALID OPTION!\n");
             break;

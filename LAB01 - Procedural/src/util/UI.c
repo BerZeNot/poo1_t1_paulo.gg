@@ -10,8 +10,9 @@ void showStartMenu(){
     printf("| 1 - Register Client                |\n");
     printf("| 2 - Register Employee              |\n");
     printf("| 3 - Register Product               |\n");
-    printf("| 4 - Reports                        |\n");
-    printf("| 5 - Exit                           |\n");
+    printf("| 4 - Register Sale                  |\n");
+    printf("| 5 - Reports                        |\n");
+    printf("| 0 - Exit                           |\n");
     printf("|____________________________________|\n");
 }
 
@@ -33,6 +34,13 @@ void ShowEmployeeRegister(){
 void ShowProductRegister(){
     printf("______________________________________\n");
     printf("|         Product Register           |\n");
+    printf("|____________________________________|\n");
+    printf("|____________________________________|\n");
+}
+
+void ShowSaleRegister(){
+    printf("______________________________________\n");
+    printf("|           Sale Register            |\n");
     printf("|____________________________________|\n");
     printf("|____________________________________|\n");
 }

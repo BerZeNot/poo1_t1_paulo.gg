@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-// #include "../entity/Client.c"
 #include "../data/ClientDataManipulator.c"
 
 void registrateClient(){
