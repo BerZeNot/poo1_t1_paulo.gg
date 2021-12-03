@@ -15,7 +15,7 @@ struct ClientList{
 
 
 
-ClientList* list_create(){
+ClientList* client_list_create(){
     ClientList *list;
     list = malloc(sizeof(ClientList));
     if(list != NULL){
@@ -24,7 +24,7 @@ ClientList* list_create(){
     }
 }
 
-int list_free(ClientList *li){
+int client_list_free(ClientList *li){
     if(li == NULL)
         return INVALID_NULL_POINTER;
     else{
@@ -45,7 +45,7 @@ int list_free(ClientList *li){
     }
 }
 
-int list_push_front(ClientList *li, Client cli){
+int client_list_push_front(ClientList *li, Client cli){
     if(li == NULL)
         return INVALID_NULL_POINTER;
     
@@ -67,7 +67,7 @@ int list_push_front(ClientList *li, Client cli){
     return SUCESS;
 }
 
-int list_push_back(ClientList *li, Client cli){
+int client_list_push_back(ClientList *li, Client cli){
     if(li == NULL)
         return INVALID_NULL_POINTER;
     
@@ -93,7 +93,7 @@ int list_push_back(ClientList *li, Client cli){
     return SUCESS;
 }
 
-int list_size(ClientList *li){
+int client_list_size(ClientList *li){
     if(li == NULL)
         return INVALID_NULL_POINTER;
     if(li->head == NULL)
@@ -110,7 +110,7 @@ int list_size(ClientList *li){
     return size;
 }
 
-int list_pop_front(ClientList *li){
+int client_list_pop_front(ClientList *li){
     if(li == NULL)
         return INVALID_NULL_POINTER;
 
@@ -127,7 +127,7 @@ int list_pop_front(ClientList *li){
     } 
 };
 
-int list_pop_back(ClientList *li){
+int client_list_pop_back(ClientList *li){
     if(li == NULL)
         return SUCESS;
     else{
@@ -149,7 +149,7 @@ int list_pop_back(ClientList *li){
     }
 }
 
-int list_erase_pos(ClientList *li, int pos){
+int client_list_erase_pos(ClientList *li, int pos){
     if(li == NULL)
         return INVALID_NULL_POINTER;
     
@@ -180,10 +180,10 @@ int list_erase_pos(ClientList *li, int pos){
     }
 }
 
-int list_find_pos(ClientList *li, int pos, Client *cli){
+int client_list_find_pos(ClientList *li, int pos, Client *cli){
     if(li == NULL)
         return INVALID_NULL_POINTER;
-    else if(pos <= 0 || pos > list_size(li))
+    else if(pos <= 0 || pos > client_list_size(li))
         return OUT_OF_RANGE;
     else {
         int currPos = 1; // Current Position
@@ -202,7 +202,7 @@ int list_find_pos(ClientList *li, int pos, Client *cli){
     }
 }
 
-int list_back(ClientList *li, Client *cli){
+int client_list_back(ClientList *li, Client *cli){
     if(li == NULL)
         return INVALID_NULL_POINTER;
     else{
@@ -225,7 +225,7 @@ int list_back(ClientList *li, Client *cli){
     }
 }
 
-int list_print(ClientList *li){
+int client_list_print(ClientList *li){
     if(li == NULL)
         return INVALID_NULL_POINTER;
     else{
