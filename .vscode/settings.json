@@ -2,6 +2,7 @@
     "files.associations": {
         "stdio.h": "c",
         "listclient.h": "c",
-        "listemployee.h": "c"
+        "listemployee.h": "c",
+        "listsale.h": "c"
     }
 }
