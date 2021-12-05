@@ -4,6 +4,7 @@
 #include "../controller/EmployeeController.c"
 #include "../controller/ProductController.c"
 #include "../controller/SaleController.c"
+#include "../data/FileManipulator.c"
 
 int menu();
 

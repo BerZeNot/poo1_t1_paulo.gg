@@ -38,6 +38,8 @@ void registrateSale(){
 
     } while(registerOther == 'y' || registerOther == 'Y');
 
+    newSale.productsAmount = nextFreePositionOnItemSaleArray;
+    
     saveSale(newSale);
 
     printf("| Data saved [EmployeeCPF=%s, ClientCPF=%s]\n", newSale.employeeCPF, newSale.clientCPF);

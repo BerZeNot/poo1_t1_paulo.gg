@@ -1,5 +1,4 @@
-gcc -c ../tads/Implementation/ListClient.c -o ListClient.o
 gcc -c program.c -o program.o
-gcc -o program program.o ../tads/ListClient.h ../tads/Implementation/ListClient.c
+gcc -o program program.o
 rm *.o
-./program
+# ./program

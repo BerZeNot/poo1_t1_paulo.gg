@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "FileManipulator.c"
+// #include "FileManipulator.c"
 #include "../tads/ListClient.h"
 
 char clientFileDataPath[] = {"../data/database/Clients.data"};
