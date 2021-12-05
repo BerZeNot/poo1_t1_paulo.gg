@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include "../util/UI.c"
+#include "../data/FileManipulator.c"
 #include "../controller/ClientController.c"
 #include "../controller/EmployeeController.c"
 #include "../controller/ProductController.c"
 #include "../controller/SaleController.c"
-#include "../data/FileManipulator.c"
+#include "../controller/ReportsController.c"
 
 int menu();
 
@@ -20,8 +21,7 @@ int menu(){
         showStartMenu(); // from /util/UI.c
         printf("| Choose a option: ");
         scanf("%d", &option);
-        switch (option)
-        {
+        switch (option) {
         case 1:
             registrateClient();
             break;
@@ -34,9 +34,9 @@ int menu(){
         case 4:
             registrateSale();
             break;
-        // case 5:
-        //     reports();
-        //     break;
+        case 5:
+            reports();
+            break;
         case 0:
             exit(0);
             break;

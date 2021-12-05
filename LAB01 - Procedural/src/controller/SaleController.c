@@ -1,4 +1,4 @@
-#include "../entity/Sale.c"
+// #include "../entity/Sale.c"
 #include "../data/SaleDataManipulator.c"
 
 void registrateSale(){

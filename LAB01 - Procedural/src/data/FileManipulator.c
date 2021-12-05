@@ -1,4 +1,4 @@
-// #include <stdio.h>
+#include <stdio.h>
 
 FILE *openFile(char *fileName, char *openingMode){
     FILE *fp = fopen(fileName, openingMode);

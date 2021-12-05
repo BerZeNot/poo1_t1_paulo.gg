@@ -44,3 +44,19 @@ void ShowSaleRegister(){
     printf("|____________________________________|\n");
     printf("|____________________________________|\n");
 }
+
+void ShowReportsOptions(){
+    printf("______________________________________\n");
+    printf("|              Reports               |\n");
+    printf("|____________________________________|\n");
+    printf("|____________________________________|\n");
+    printf("|                                    |\n");
+    printf("| 1 - List all Clients               |\n");
+    printf("| 2 - List all Employees             |\n");
+    printf("| 3 - List all Products              |\n");
+    printf("| 4 - List all Sales                 |\n");
+    printf("| 5 - Best selling product           |\n");
+    printf("| 6 - Customer who spends the most   |\n");
+    printf("| 0 - Back                           |\n");
+    printf("|____________________________________|\n");
+}
