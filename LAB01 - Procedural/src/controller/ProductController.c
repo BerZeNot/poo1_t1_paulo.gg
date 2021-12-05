@@ -14,6 +14,7 @@ void registrateProduct(){
     printf("| Name: ");
     scanf("%[^\n]s", newProduct.name);
 
+    setbuf(stdin,NULL);
     printf("| Manufacturer: ");
     scanf("%[^\n]s", newProduct.manufacturer);
 

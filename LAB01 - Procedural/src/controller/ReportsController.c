@@ -33,6 +33,7 @@ void reports(){
 
         case 5:
             printf("| Best selling product\n");
+            findBestSellerProduct();
             break;
         case 6:
             printf("| Customer who spends the most\n");
