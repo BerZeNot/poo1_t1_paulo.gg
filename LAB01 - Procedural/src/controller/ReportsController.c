@@ -1,3 +1,5 @@
+#include "../service/ReportService.c"
+
 void reports(){
     int option;
     do{
@@ -11,18 +13,22 @@ void reports(){
 
         case 1:
             printf("| List all Clients\n");
+            showAllClients();
             break;
       
         case 2:
             printf("| List all Employees\n");
+            showAllEmployees();
             break;
 
         case 3:
             printf("| List all Products\n");
+            showAllProducts();
             break;
 
         case 4:
             printf("| List all Sales\n");
+            showAllSales();
             break;
 
         case 5:
