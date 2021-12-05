@@ -3,8 +3,8 @@
 #define OUT_OF_MEMORY -2
 #define OUT_OF_RANGE -3
 #define ELEM_NOT_FOUND -4
-
 #include "../entity/Client.c"
+
 
 typedef struct ClientList ClientList;
 

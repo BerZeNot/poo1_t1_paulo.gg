@@ -3,6 +3,7 @@
         "stdio.h": "c",
         "listclient.h": "c",
         "listemployee.h": "c",
-        "listsale.h": "c"
+        "listsale.h": "c",
+        "stdlib.h": "c"
     }
 }

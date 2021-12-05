@@ -6,7 +6,7 @@ char employeeFileDataPath[] = {"../data/database/Employees.data"};
 
 int saveEmployee(Employee employee){
     
-    FILE *fp = openFile(employeeFileDataPath);
+    FILE *fp = openFile(employeeFileDataPath, "ab");
 
     fwrite(&employee, sizeof(Employee), 1, fp);
 

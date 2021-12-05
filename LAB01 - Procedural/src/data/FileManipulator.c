@@ -1,7 +1,7 @@
-#include <stdio.h>
+// #include <stdio.h>
 
-FILE *openFile(char *fileName){
-    FILE *fp = fopen(fileName, "ab");
+FILE *openFile(char *fileName, char *openingMode){
+    FILE *fp = fopen(fileName, openingMode);
     if(fp == NULL){
         fp = fopen(fileName, "wb");
         if(fp == NULL){
@@ -13,6 +13,6 @@ FILE *openFile(char *fileName){
     return fp;  
 }
 
-void *closeFile(FILE *fp){
+void closeFile(FILE *fp){
     fclose(fp);
 }
