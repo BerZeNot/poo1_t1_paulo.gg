@@ -37,6 +37,7 @@ void reports(){
             break;
         case 6:
             printf("| Customer who spends the most\n");
+            findTheBiggestConsumer();
             break;
 
         default:

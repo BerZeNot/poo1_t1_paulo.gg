@@ -81,3 +81,63 @@ void findBestSellerProduct(){
     printf("| The best seller product is %s with %d sales.\n", bestSellerProduct.name, aux);
 
 }
+
+void findTheBiggestConsumer(){
+    ClientList *listClients;
+    ProductList *listProducts;
+    SaleList *listSales;
+
+    Client currentClient;
+    Client biggestConsumer;
+    Product productAux;
+    Sale currentSale;
+    
+    listClients = client_list_create();
+    listProducts = product_list_create();
+    listSales = sale_list_create();
+
+    loadClientsDataFromFileDataToList(listClients);
+    loadProductsDataFromFileDataToList(listProducts);
+    loadSalesDataFromFileDataToList(listSales);
+
+    int clientsAmount;
+    int salesAmount;
+    double *spendAmountOfEachClient;
+    double sumOfExpenses=0.0;
+
+    clientsAmount = client_list_size(listClients);
+    salesAmount = sale_list_size(listSales);
+
+    spendAmountOfEachClient = malloc(clientsAmount * sizeof(double));
+
+    for(int i = 0; i < clientsAmount; i++){
+        client_list_find_pos(listClients, i+1, &currentClient);
+        
+        for(int j = 1; j <= salesAmount; j++){
+            sale_list_find_pos(listSales, j, &currentSale);
+
+            if(strcmp(currentClient.cpf, currentSale.clientCPF) == 0){
+                for(int k = 0; k < currentSale.productsAmount; k++){
+                    product_list_find_code(listProducts, currentSale.itemSale[k].productCode,&productAux);
+                    sumOfExpenses += productAux.price * currentSale.itemSale[k].amount;
+                }
+            }
+        }
+        spendAmountOfEachClient[i] = sumOfExpenses;
+        sumOfExpenses = 0.0;
+    }
+
+    double auxBiggestSpend = 0.0;
+    int positionOfBiggestExpend = 0;
+    for(int i=0; i < clientsAmount; i++){
+        if(spendAmountOfEachClient[i] > auxBiggestSpend){
+            auxBiggestSpend = spendAmountOfEachClient[i];
+            positionOfBiggestExpend = i;
+        }
+    }
+
+    client_list_find_pos(listClients, positionOfBiggestExpend+1, &biggestConsumer);
+
+    printf("| The biggest consumer is %s with %.2f spent.\n", biggestConsumer.name, spendAmountOfEachClient[positionOfBiggestExpend]);
+
+}

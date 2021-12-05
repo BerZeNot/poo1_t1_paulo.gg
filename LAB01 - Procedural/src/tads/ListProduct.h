@@ -39,7 +39,7 @@ int product_list_find_pos(ProductList *li, int pos, Product *prod);
 int product_list_front(ProductList *li, Product *prod);
 
 // procura um produto na lista dado um código de produto
-int product_list_find_code(ProductList *li, int code, Product *prod){
-
+int product_list_find_code(ProductList *li, int code, Product *prod);
+    
 // imprime a lista (única função que permite printf!) OK
 int product_list_print(ProductList *li);
