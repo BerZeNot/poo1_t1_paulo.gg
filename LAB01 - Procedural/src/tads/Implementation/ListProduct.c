@@ -225,6 +225,29 @@ int product_list_back(ProductList *li, Product *prod){
     }
 }
 
+int product_list_find_code(ProductList *li, int code, Product *prod){
+    if(li == NULL)
+        return INVALID_NULL_POINTER;
+    else{
+        if(li->head == NULL)
+            return ELEM_NOT_FOUND;
+        else{
+            list_node *curr;
+            curr = li->head;
+            while(curr != NULL && curr->data.code != code){
+                curr = curr->next;
+            }
+            if(curr == NULL)
+                return ELEM_NOT_FOUND;
+            else if(curr->data.code == code){
+                *prod = curr->data;
+                return SUCESS;
+            }
+            return ELEM_NOT_FOUND;
+        }
+    }
+}
+
 int product_list_print(ProductList *li){
     if(li == NULL)
         return INVALID_NULL_POINTER;
