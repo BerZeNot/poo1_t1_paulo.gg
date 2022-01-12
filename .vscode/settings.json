@@ -5,7 +5,8 @@
         "listemployee.h": "c",
         "listsale.h": "c",
         "stdlib.h": "c",
-        "typeinfo": "c"
+        "typeinfo": "c",
+        "string.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
