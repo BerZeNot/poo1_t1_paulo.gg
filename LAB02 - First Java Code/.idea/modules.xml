@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/LAB02 - First Java Code.iml" filepath="$PROJECT_DIR$/LAB02 - First Java Code.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/LAB02 - First Java Code.iml" filepath="$PROJECT_DIR$/.idea/LAB02 - First Java Code.iml" />
+>>>>>>> a64503fd28ce138c294142ed25405d1a3d3b0dc9
     </modules>
   </component>
 </project>
