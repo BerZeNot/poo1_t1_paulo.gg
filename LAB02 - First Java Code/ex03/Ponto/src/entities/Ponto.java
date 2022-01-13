@@ -31,7 +31,53 @@ public class Ponto {
     }
 
     public static double calcArea(Ponto p1, Ponto p2){
-        return 0;
+        if(p1.getX() != p2.getX() && p1.getY() != p2.getY()){
+            double area = (p2.getX() - p1.getX()) * (p2.getY() - p1.getY());
+            return Math.abs(area);
+        } else {
+            System.out.println("Os pontos informados não formam um retângulo!");
+            return -1;
+        }
+    }
+
+    public static void multiplicaPorConstante(Ponto p,double constante){
+        p.setX(p.getX() * constante);
+        p.setY(p.getY() * constante);
+    }
+
+    public void incDir(char dir){
+        if (dir == 'n' || dir == 'N')
+            this.y++;
+        else if(dir == 's' || dir == 'S')
+            this.y--;
+        else if(dir == 'l' || dir == 'L')
+            this.x++;
+        else if(dir == 'o' || dir == 'O')
+            this.x--;
+    }
+
+    public void incDiag(String dir){
+        if (dir.equals("nordeste")){
+            this.x++;
+            this.y++;
+        }
+        else if(dir.equals("noroeste")){
+            this.x--;
+            this.y++;
+        }
+        else if(dir.equals("sudeste")){
+            this.x++;
+            this.y--;
+        }
+        else if(dir.equals("sudoeste")) {
+            this.x--;
+            this.y--;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "(" + x + "," + y + ")";
     }
 
     public double getX() {
