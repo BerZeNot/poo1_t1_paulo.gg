@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/LAB02 - First Java Code/ex01/Carro/Carro.iml" filepath="$PROJECT_DIR$/LAB02 - First Java Code/ex01/Carro/Carro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LAB02 - First Java Code/ex01/Conta_V0/Conta_V0.iml" filepath="$PROJECT_DIR$/LAB02 - First Java Code/ex01/Conta_V0/Conta_V0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LAB02 - First Java Code/ex01/Conta_V1/Conta_V1.iml" filepath="$PROJECT_DIR$/LAB02 - First Java Code/ex01/Conta_V1/Conta_V1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LAB02 - First Java Code/ex02/ex02.iml" filepath="$PROJECT_DIR$/LAB02 - First Java Code/ex02/ex02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LAB02 - First Java Code/ex03/ex03.iml" filepath="$PROJECT_DIR$/LAB02 - First Java Code/ex03/ex03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab03 - Data Structures/list/list.iml" filepath="$PROJECT_DIR$/Lab03 - Data Structures/list/list.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/paulo.gg.iml" filepath="$PROJECT_DIR$/.idea/paulo.gg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab03 - Data Structures/stack/stack.iml" filepath="$PROJECT_DIR$/Lab03 - Data Structures/stack/stack.iml" />
+    </modules>
+  </component>
+</project>
