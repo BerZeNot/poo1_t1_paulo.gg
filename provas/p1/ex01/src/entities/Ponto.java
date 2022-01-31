@@ -1,4 +1,5 @@
 package entities;
+// check: o ponto é formado por número real
 
 public class Ponto {
     private int x;
