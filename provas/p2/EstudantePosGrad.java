@@ -1,23 +1,19 @@
-public class EstudantePosGrad {
-    String CPF;
-    String Nome;
-    String Matricula;
-    int CargaHorariaDisciplinas;
+import java.util.Locale;
+
+public class EstudantePosGrad extends Estudante implements Senioridade {
     String Nivel; // doutorado ou mestrado
     String TemaProjetoPesquisa;
 
     public EstudantePosGrad(String CPF, String matricula, String nome) {
-        this.CPF = CPF;
-        Nome = nome;
-        Matricula = matricula;
+        super(nome,CPF,matricula);
     }
 
     public int getCargaHorariaDisciplinas() {
-        return CargaHorariaDisciplinas;
+        return super.getCargaHorariaDisciplinas();
     }
 
     public void setCargaHorariaDisciplinas(int cargaHorariaDisciplinas) {
-        CargaHorariaDisciplinas = cargaHorariaDisciplinas;
+        super.setCargaHorariaDisciplinas(cargaHorariaDisciplinas);
     }
 
     public String getNivel() {
@@ -36,13 +32,33 @@ public class EstudantePosGrad {
         TemaProjetoPesquisa = temaProjetoPesquisa;
     }
 
-    public void informacoesEstudantePos(){
-        System.out.println("Nome: " + Nome);
-        System.out.println("CPF: " + CPF);
-        System.out.println("Matricula: " + Matricula );
-        System.out.println("Carga Horária: " +  CargaHorariaDisciplinas);
+    @Override
+    public void informacoesEstudante(){
+        System.out.println("Nome: " + super.getNome());
+        System.out.println("CPF: " + super.getCPF());
+        System.out.println("Matricula: " + super.getMatricula() );
+        System.out.println("Carga Horária: " +  super.getCargaHorariaDisciplinas());
         System.out.println("Nível: " +  Nivel);
         System.out.println("Tema de pesquisa: " +  TemaProjetoPesquisa);
+    }
+
+    @Override
+    public void gerarCertificado() {
+        System.out.println("Certifico que o " + super.Nome + "participa do projeto " + getTemaProjetoPesquisa());
+    }
+
+    @Override
+    public void registrarVacinacao() {
+        super.vacinadx = true;
+    }
+
+    @Override
+    public boolean ehSenior(Senioridade obj) {
+        boolean thisIsDoutor, objIsDoutor;
+        thisIsDoutor = Nivel.equalsIgnoreCase("doutor");
+        objIsDoutor = ((EstudantePosGrad)obj).Nivel.equalsIgnoreCase("doutor");
+
+        return (thisIsDoutor && !objIsDoutor);
     }
 }
 

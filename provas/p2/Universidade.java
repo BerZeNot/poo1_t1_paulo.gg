@@ -8,10 +8,21 @@ public class Universidade {
         EstudantePosGrad p2 = new EstudantePosGrad("352.147.482-35","12213CCP055" ,"Valéria Ferreira");
         EstudantePosGrad p3 = new EstudantePosGrad("788.245.742-94","12213CCP048" ,"Helena Fernandes");
 
-        g1.informacoesEstudanteGrad(); g2.informacoesEstudanteGrad(); g3.informacoesEstudanteGrad();
-        p1.informacoesEstudantePos(); p2.informacoesEstudantePos(); p3.informacoesEstudantePos();
+        Estudante estudantes[] = new Estudante[]{g1,g2,g3,p1,p2,p3};
 
+        for(Estudante e : estudantes){
+            e.informacoesEstudante();
+        }
 
+        System.out.println("<< Demonstração de uso do setCargaHoraria de alunos da graduação >> ");
 
+        try{
+            g1.setCargaHorariaDisciplinas(90);
+            g2.setCargaHorariaDisciplinas(3000);
+            g3.setCargaHorariaDisciplinas(3010);
+        } catch (CargaHorariaInvalidaExeption e){
+            e.printStackTrace();
+        }
+        System.out.println("Fim");
     }
 }
